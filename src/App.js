@@ -1,25 +1,28 @@
-import logo from './logo.svg';
 import './App.css';
+import CocktailRandom from './components/CocktailRandom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import NavBar from './components/NavBar';
+import Home from './components/Home';
+import SearchCocktail from './components/SearchCocktail';
+import CocktailDetails from './components/CocktailsDetails';
+import Banner from "./components/Banner";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div>
+        <Banner/>
+        <NavBar/>
+      </div>
+      <Routes>
+        <Route path="/" element={<Home/>}/>
+        <Route path="/search_cocktail" element={<SearchCocktail/>}/>
+        <Route path="/surprise_me" element={<CocktailRandom/>}/>
+        <Route path="/:id" element={<CocktailDetails/>}/>
+      </Routes>
+    </Router>
   );
+    
 }
 
 export default App;
