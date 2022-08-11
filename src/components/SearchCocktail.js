@@ -3,6 +3,7 @@ import {useState} from "react";
 import CocktailByCat from "./CocktailByCat";
 import CocktailByName from "./CocktailByName";
 import CocktailWithoutAlcohol from "./CocktailWithoutAlcohol";
+import NavBar from "./NavBar";
 
 function SearchCocktail(){
     const[cocktailByName, setCocktailByName] = useState("");
@@ -37,6 +38,7 @@ function SearchCocktail(){
     
     return(
         <div>
+            <NavBar/>
             <h2>Search a cocktail</h2>
             <label htmlFor="name"> By name : </label>
             <input type="text" name="name" value={searchByName} onChange={e => setSearchByName(e.target.value)} placeholder="ex : Mojito"/>

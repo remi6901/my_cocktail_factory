@@ -1,0 +1,12 @@
+.navBarUl{
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+}
+
+.navBarUl li a{
+    color: black;
+    text-decoration: none;
+}

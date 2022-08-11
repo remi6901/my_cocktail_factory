@@ -1,0 +1,48 @@
+.cocktailDetailsPrincipalDiv{
+    border: solid 2px black;
+    width: 80%;
+    border-radius: 20px;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom:5vh ;
+    padding-bottom: 5vh;
+}
+
+.cocktailDetailsDiv{
+    display: flex;
+    align-items: center;
+    
+}
+
+.cocktailDetailsTitle{
+    text-align: center;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+
+.cocktailDetailsDivImg{
+    width: 40%;
+}
+
+.cocktailDetailsUl{
+    list-style-type: none;
+    margin-left: -40px;
+}
+
+.cocktailDetailsDivRecip{
+    width: 60%;
+}
+
+.cocktailDetailsImg{
+    width: 80%;
+    margin-left: 2%;
+    border-radius: 5px;
+}
+
+.cocktailDetailsButton{
+    width: 10%;
+    margin-left: 45%;
+    margin-right: 45%;
+    margin-top: 5vh;
+    margin-bottom: 1vh;
+}

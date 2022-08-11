@@ -1,0 +1,42 @@
+.homeParagraph{
+    font-size: 20px;
+    text-align: center;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+
+.homeDivCocktail{
+    display: flex;
+    width: 100%;
+    margin-bottom: 10vh;
+}
+
+.homeDivImgCocktail1{
+    width: 20%;
+   height: 60vh;
+   background-image: url("../assets/cocktail1.jpg") ;
+   background-size: 100%;
+   background-size: 25rem;
+    margin-left: 20%;
+}
+
+.homeDivImgCocktail2{
+    width: 20%;
+    height: 60vh;
+    background-image: url("../assets/cocktail2.jpg") ;
+    background-size: 100%;
+    background-size: 25rem;
+    margin-right: 20%;
+    margin-left: 20%;
+}
+
+.homeH3Cocktail{
+    color: white;
+    font-size:xx-large;
+    text-align: center;
+    line-height: 10vh;
+}
+

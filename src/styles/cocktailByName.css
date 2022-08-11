@@ -1,0 +1,13 @@
+.cocktailByNameDivPrincipal{
+    display:flex;   
+}
+
+.cocktailByNameDiv{
+    width: 25%;
+    text-align: center;
+    border: solid black 2px;
+}
+
+.cocktailByNameImg{
+    width: 50%;
+}
