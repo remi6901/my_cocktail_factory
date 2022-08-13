@@ -1,0 +1,156 @@
+.divForm{
+    
+    width: 100%;
+    color: black;
+    position: absolute;
+    margin-top: -98vh;
+}
+
+.img1, .img2{
+    width: 50%;
+    height: 110vh;
+    
+}
+
+
+.paragraphForm{
+    margin-left: 38%;
+    margin-right: 38%;
+    text-align: center;
+    padding-top: 8vh;
+    font-weight: bold;
+    color: white;
+}
+
+.h1Form{
+    text-align: center;
+    padding-top: 5vh;
+    color: #EAD519;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top:  5vh;  
+}
+
+.labelForm{
+    margin-top: 10px;
+    color: white
+}
+
+.inputForm{
+    width: 30%;
+    height: 25px;
+    background-color: #EAD519;
+    border-radius: 10px;
+}
+
+.textareaForm{
+    width: 30%;
+    height: 20vh;
+    background-color: #EAD519;
+    border-radius: 10px;
+}
+
+.buttonForm{
+    background-color:#EAD519 ;
+    border-radius: 10px;
+    line-height:0 ;
+    width: 10%;
+    height: 40px;
+    margin-top: 20px;
+    margin-left: 20%;
+    margin-right: 20%;
+    border: solid white 2px;
+}
+
+.buttonForm:hover{
+    cursor: pointer;
+    color: white;
+}
+
+
+
+@media screen and (max-width:1200px) {
+
+    .paragraphForm{
+        padding-top: 5vh;
+    }
+
+    .form{
+        padding-top: 5vh;   
+    }
+
+    .inputForm{
+        width: 40%;
+    }
+
+    .textareaForm{
+        width: 40%;
+    }
+}
+
+@media screen and (max-width:800px) {
+
+    .divForm{
+        margin-top: -110vh;
+    }
+
+    .labelForm{
+        color: black
+    }
+
+    .h1Form{    
+    color: black;
+    }
+
+    .img1{
+        display: none;
+    }
+
+    .img2{
+        width: 100%;
+        height: 130vh;
+    }
+
+    .paragraphForm{
+        margin-left: 10%;
+        margin-right: 10%;
+        color: black;
+    }
+
+    .inputForm{
+        width: 60%;
+    }
+
+    .textareaForm{
+        width: 60%;
+    }
+
+    .buttonForm{
+        width: 20%;
+    }
+}
+
+@media screen and (min-height:800px) {
+    @media screen and (max-width:1200px) {
+    
+    .img1, .img2{
+        height: 80vh;
+    }
+
+    .divForm{
+        margin-top: -80vh;
+    }
+
+}}
+
+@media screen and (min-height:800px) {
+    @media screen and (max-width:800px) {
+
+    .divForm{
+        margin-top: -70vh;
+    }
+    }}

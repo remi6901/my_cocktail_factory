@@ -1,11 +1,14 @@
 .cocktailRandomPrincipalDiv{
-    border: solid 2px black;
+    background-color: black;
+    color: yellow;
+    border: solid 4px yellow;
     width: 80%;
     border-radius: 20px;
     margin-left: 10%;
     margin-right: 10%;
+    margin-top: 5vh;
     margin-bottom:5vh ;
-    padding-bottom: 5vh;;
+    padding-bottom: 5vh;
 }
 
 .cocktailRandomDiv{
@@ -36,7 +39,7 @@
 .cocktailRandomImg{
     width: 80%;
     margin-left: 2%;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 .cocktailRandomButton{

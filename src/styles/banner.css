@@ -1,9 +1,17 @@
+.bannerDivPrincipal{
+    background-color: black;
+    padding-bottom: 0.1vh;
+    padding-top: 1vh;
+}
+
 .bannerTitle{
     font-family: 'Dancing Script', cursive; 
     font-size: 60px;
     text-align: center;
+    color: yellow;
 }
 
 .bannerCocktailTitle{
     font-family:'Rubik Moonrocks', cursive; 
+    color: white;
 }

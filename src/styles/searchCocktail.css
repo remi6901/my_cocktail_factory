@@ -1,0 +1,57 @@
+.searchCocktailDivPrincipal{
+    background-color: black;
+    color: yellow;
+}
+
+.searchCocktailDivContainer{
+    display: flex;
+    align-items: center;
+    height: 50vh;
+    border: solid yellow 3px;
+    border-radius: 5px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.searchCocktailContainer1{
+    width: 65%;
+    font-family: 'Dancing Script', cursive;
+    font-size: 50px;
+    text-align: center;
+}
+
+.searchCocktailContainer2{
+   width: 17%;
+}
+
+.searchCocktailContainer3{
+    width: 18%;
+ }
+
+.searchCocktailImgCocktail3{
+    width: 100%;
+    height: 49.5vh;
+}
+
+.searchCocktailImgCocktail4{
+    width: 100%;
+    height:49.5vh;
+}
+
+.searchCocktailByNameContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.searchCocktailByCatContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.searchCocktailWithoutAlcoholContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}

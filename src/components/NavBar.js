@@ -3,10 +3,10 @@ import "../styles/navbar.css"
 
 function NavBar(){
     return(
-        <div>
+        <div className="navBarDivPrincipal">
             <ul className="navBarUl">
                 <li><Link to="/">Home</Link></li>
-                <li><Link to="/search_cocktail">Search</Link></li>
+                <li><Link to="/search_cocktail">Search a cocktail</Link></li>
                 <li><Link to="/surprise_me">Surprise me</Link></li>
                 <li><Link to="/contact">Contact</Link></li>
             </ul>

@@ -4,6 +4,10 @@ import CocktailByCat from "./CocktailByCat";
 import CocktailByName from "./CocktailByName";
 import CocktailWithoutAlcohol from "./CocktailWithoutAlcohol";
 import NavBar from "./NavBar";
+import "../styles/searchCocktail.css";
+import cocktail3 from "../assets/cocktail3.jpg";
+import cocktail4 from "../assets/cocktail4.jpg";
+
 
 function SearchCocktail(){
     const[cocktailByName, setCocktailByName] = useState("");
@@ -34,15 +38,35 @@ function SearchCocktail(){
         .then(response => response.data)
         .then(data => setCocktailWithoutAlcohol(data.drinks))
     }
-       
+     
+
+    function handleSetValue(e){
+        e.preventDefault()
+        setSearchByName(e.target.value)
+    }
     
     return(
-        <div>
+        <div className="searchCocktailDivPrincipal">
             <NavBar/>
-            <h2>Search a cocktail</h2>
+            <div className="searchCocktailDivContainer">
+                <div className="searchCocktailContainer1">
+                    <p>Search your favorite cocktail</p>
+                </div>
+                <div className="searchCocktailContainer2">
+                    <img className="searchCocktailImgCocktail3" src={cocktail3} alt="photo d'un cocktail"/>
+                </div>
+                <div className="searchCocktailContainer3">
+                    <img className="searchCocktailImgCocktail4" src={cocktail4} alt="photo d'un cocktail"/>
+                </div>
+            </div>
             <label htmlFor="name"> By name : </label>
-            <input type="text" name="name" value={searchByName} onChange={e => setSearchByName(e.target.value)} placeholder="ex : Mojito"/>
+            <input type="text" name="name" value={searchByName} onChange={handleSetValue} placeholder="ex : Mojito"/>
             <button onClick={getCocktailByName}>Search</button><br/>
+            <div className="searchCocktailByNameContainer">
+                {cocktailByName && cocktailByName.map((cocktail) => (
+                   <CocktailByName cocktail={cocktail} key={cocktail.idDrink}/>
+            ))}
+            </div>
             <label htmlFor="name"> By alcohol : </label>
             <select onChange={e => setSearchByCat(e.target.value)}>
                 <option value="">---</option>
@@ -62,17 +86,18 @@ function SearchCocktail(){
                 <option value="Whiskey">Whiskey</option> 
             </select>
             <button onClick={getCocktailByCat}>Search</button>
-            {cocktailByName && cocktailByName.map((cocktail) => (
-               <CocktailByName cocktail={cocktail} key={cocktail.idDrink}/>
-            ))} 
-            {cocktailByCat && cocktailByCat.map((cocktail) => (
-                <CocktailByCat cocktail={cocktail} key={cocktail.idDrink}/>
-            ))}
+            <div className="searchCocktailByCatContainer">
+                {cocktailByCat && cocktailByCat.map((cocktail) => (
+                    <CocktailByCat cocktail={cocktail} key={cocktail.idDrink}/>
+                ))}
+            </div>
             <p>If you looking for a cocktail without alcohol, </p>
             <button onClick={getCocktailWithoutAlcohol}>Click here</button>
-            {cocktailWithoutAlcohol && cocktailWithoutAlcohol.map((cocktail) => (
-                <CocktailWithoutAlcohol cocktail={cocktail} key={cocktail.idDrink}/>
-            ))}
+            <div className="searchCocktailWithoutAlcoholContainer">
+                {cocktailWithoutAlcohol && cocktailWithoutAlcohol.map((cocktail) => (
+                        <CocktailWithoutAlcohol cocktail={cocktail} key={cocktail.idDrink}/>
+                ))}
+            </div>
         </div>
     )
 }

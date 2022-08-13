@@ -1,4 +1,4 @@
-.cocktailByNameDiv{
+.cocktailWithoutAlcoholDiv{
     width: 20%;
     text-align: center;
     border: solid yellow 3px;
@@ -7,6 +7,6 @@
     margin-bottom: 5vh;
 }
 
-.cocktailByNameImg{
+.cocktailWithoutAlcoholImg{
     width: 100%;
 }
