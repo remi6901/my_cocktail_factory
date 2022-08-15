@@ -15,10 +15,13 @@ function Slider({img}){
                             <div key={cocktail.idDrink}>
                                 <img className="sliderImg" src={cocktail.strDrinkThumb} alt=""/> 
                                 <div className="overlay">
-                                    <h2 className="overlayTitle">{cocktail.strDrink}</h2>
+                                    <Link to={`/cocktail/${cocktail.idDrink}`}
+                                        style={{ textDecoration: 'none' }}>
+                                            <h2 className="overlayTitle">{cocktail.strDrink}</h2>
+                                    </Link>
                                 </div> 
                             </div>   
-                    )).slice(10,60)}
+                    )).slice(14,64)}
                 
             </Carousel>
         </div>

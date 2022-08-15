@@ -5,6 +5,8 @@ import video from "../assets/video.mp4"
 import "../styles/home.css";
 import Slider from "./Slider";
 import axios from "axios";
+import cocktail1 from "../assets/cocktail1.jpg"
+import cocktail2 from "../assets/cocktail2.jpg"
 
 
 
@@ -36,18 +38,25 @@ function handleEndVideo(){
                 do not hesitate to share your experience with us in order to help us 
                 improve by contacting us <Link to="/contact"><span className="homeContact">here.</span></Link>
                 </p>
-            <div className="homeDivCocktail">
-                <Link className="homeDivImgCocktail1" to="/search_cocktail">
-                    <div >
-                        <h3 className="homeH3Cocktail">Search a cocktail</h3>
+            <div className="homeDivContainer">
+                    <div className="homeContainer1">
+                        <img className="cocktail1" src={cocktail1} alt="" width="100%"/>
+                            <Link   to="search_cocktail"
+                                    style={{ textDecoration: 'none' }}>
+                                <div className="containerTitle1">
+                                    <h3 className="title1">Search a cocktail</h3>
+                                </div>
+                            </Link>
                     </div>
-                </Link>
-                <Link className="homeDivImgCocktail2" to="/surprise_me"> 
-                    <div>
-                        <h3 className="homeH3Cocktail">Surprise me</h3>               
+                    <div className="homeContainer2">
+                        <img className="cocktail2" src={cocktail2} alt="" width="100%"/>
+                            <Link   to="/surprise_me"
+                                    style={{ textDecoration: 'none' }}>
+                                <div className="containerTitle2">
+                                    <h3 className="title2">Surprise me</h3>
+                                </div>
+                            </Link>    
                     </div>
-                </Link>
-               
             </div>
         </div>
     )

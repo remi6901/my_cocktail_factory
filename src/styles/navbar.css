@@ -16,7 +16,7 @@
     color: black;
     text-decoration: none;
     background-color: yellow;
-    width: 10%;
+    width: 15%;
     height: 5vh;
     border-radius: 5px;
     display: flex;
@@ -27,4 +27,8 @@
 .navBarUl li a{
     color: black;
     text-decoration: none;
+}
+
+.navBarUl li a:hover{
+    font-weight: bold;
 }

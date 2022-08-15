@@ -60,7 +60,11 @@ function SearchCocktail(){
                 </div>
             </div>
             <label htmlFor="name"> By name : </label>
-            <input type="text" name="name" value={searchByName} onChange={handleSetValue} placeholder="ex : Mojito"/>
+            <input type="text" 
+                    name="name" 
+                    value={searchByName} 
+                    onChange={handleSetValue} 
+                    placeholder="ex : Mojito"/>
             <button onClick={getCocktailByName}>Search</button><br/>
             <div className="searchCocktailByNameContainer">
                 {cocktailByName && cocktailByName.map((cocktail) => (

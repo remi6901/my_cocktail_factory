@@ -1,5 +1,18 @@
+.carousel{
+    position: relative;
+}
+
+.carousel .thumbs{
+    margin: 0; 
+     
+}
+
+.carousel .thumb:hover{
+      cursor: pointer;
+}
+
 .sliderImg{
-    width: 35%;
+    width: 45%;
     margin: auto;
 }
 
@@ -12,10 +25,12 @@
     left: 50%;
     padding: 0.4rem 1.5rem;
     background-color: black;
-    opacity: 0.4;
+    background: rgba(0, 0, 0, 0.3);
 }
+
 
 .overlayTitle{
     color: white;
-    font-size: 40px;
+    font-size: 25px;  
     }
+
