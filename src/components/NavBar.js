@@ -1,29 +1,34 @@
-import {Link} from "react-router-dom";
+import { useState } from "react";
 import "../styles/navbar.css"
 
 function NavBar(){
-    return(
-        <div className="navBarDivPrincipal">
-            <ul className="navBarUl">
-                <li><Link to="/">Home</Link></li>
-                <li><Link to="/search_cocktail">Search a cocktail</Link></li>
-                <li><Link to="/surprise_me">Surprise me</Link></li>
-                <li><Link to="/contact">Contact</Link></li>
-            </ul>
-            {/*<div>
-                <Link to="/">Home</Link>
-            </div>
-            <div>
-                <Link to="/search_cocktail">Search</Link>
-            </div>
-            <div>
-                <Link to="/surprise_me">Surprise me</Link>
-            </div>
-            <div>
-                <Link to="/contact">Contact</Link>
-    </div>*/}
+    const [showLinks, setShowLinks] = useState(false);
 
-        </div>
+    function handleShowLinks(){
+        setShowLinks(!showLinks);
+    }
+
+    return(
+        <nav className={`navbar ${showLinks ? "show_nav" : "hide_nav"}`}>
+            <div></div>
+            <ul className="navbar_links">
+                <li className="navbar_item">
+                    <a href="/" className="navbar_link">Home</a>
+                </li>
+                <li className="navbar_item">
+                    <a href="/" className="navbar_link">Search a cocktail</a>
+                </li>
+                <li className="navbar_item">
+                    <a href="/" className="navbar_link">Surprise me</a>
+                </li>
+                <li className="navbar_item">
+                    <a href="/" className="navbar_link">Contact</a>
+                </li>
+            </ul>
+            <button className="navbar_burger" onClick={handleShowLinks}>
+                <span className="burger_bar"></span>
+            </button>
+        </nav>
     )
 }
 

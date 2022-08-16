@@ -16,7 +16,7 @@ const [imgCarousel, setImgCarousel] = useState([]);
 
 useEffect(() => {
     axios
-        .get(`https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Alcoholic`)
+        .get(`https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=Cocktail`)
         .then(response => response.data)
         .then(data => setImgCarousel(data.drinks))
 }, [])

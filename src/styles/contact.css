@@ -1,15 +1,20 @@
-.divForm{
-    
+.divContactForm{
+    width: 100%;
+    color: black;
+    position: relative;   
+}
+
+
+.divForm{ 
     width: 100%;
     color: black;
     position: absolute;
-    margin-top: -98vh;
+    top: 20%;
 }
 
+
 .img1, .img2{
-    width: 50%;
-    height: 110vh;
-    
+    width: 50%;   
 }
 
 
@@ -17,23 +22,26 @@
     margin-left: 38%;
     margin-right: 38%;
     text-align: center;
-    padding-top: 8vh;
+    padding-top: 3vh;
     font-weight: bold;
     color: white;
 }
 
+
 .h1Form{
     text-align: center;
-    padding-top: 5vh;
+    padding-top: 3vh;
     color: #EAD519;
 }
+
 
 .form{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top:  5vh;  
+    padding-top:  3vh;  
 }
+
 
 .labelForm{
     margin-top: 10px;
@@ -42,7 +50,7 @@
 
 .inputForm{
     width: 30%;
-    height: 25px;
+    height: 5vh;
     background-color: #EAD519;
     border-radius: 10px;
 }
@@ -59,7 +67,7 @@
     border-radius: 10px;
     line-height:0 ;
     width: 10%;
-    height: 40px;
+    height: 30px;
     margin-top: 20px;
     margin-left: 20%;
     margin-right: 20%;
@@ -154,3 +162,5 @@
         margin-top: -70vh;
     }
     }}
+
+    
