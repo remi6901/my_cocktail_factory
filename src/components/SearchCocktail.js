@@ -14,14 +14,18 @@ function SearchCocktail(){
     const[cocktailByCat, setCocktailByCat] = useState("");
     const[searchByName, setSearchByName] = useState("");
     const[searchByCat, setSearchByCat] = useState("");
-    const[cocktailWithoutAlcohol, setCocktailWithoutAlcohol] = useState("")
+    const[cocktailWithoutAlcohol, setCocktailWithoutAlcohol] = useState("");
+    const[searchByNameVisible, setSearchByNameVisible] = useState(true);
+    
 
     
     function getCocktailByName(){
         axios
             .get(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${searchByName}`)
             .then(response => response.data)
-            .then(data => setCocktailByName(data.drinks))
+            .then(data => setCocktailByName(data.drinks));
+            setSearchByNameVisible(!searchByNameVisible);
+            console.log(searchByNameVisible)
     }
     
 
@@ -36,14 +40,15 @@ function SearchCocktail(){
         axios
         .get(`https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Non_Alcoholic`)
         .then(response => response.data)
-        .then(data => setCocktailWithoutAlcohol(data.drinks))
+        .then(data => setCocktailWithoutAlcohol(data.drinks));
     }
      
 
-    function handleSetValue(e){
+    function handleSearchByNameValue(e){
         e.preventDefault()
         setSearchByName(e.target.value)
     }
+
     
     return(
         <div className="searchCocktailDivPrincipal">
@@ -63,14 +68,14 @@ function SearchCocktail(){
             <input type="text" 
                     name="name" 
                     value={searchByName} 
-                    onChange={handleSetValue} 
+                    onChange={handleSearchByNameValue} 
                     placeholder="ex : Mojito"/>
-            <button onClick={getCocktailByName}>Search</button><br/>
-            <div className="searchCocktailByNameContainer">
+            <button onClick={getCocktailByName}>{searchByNameVisible ? "Close" : "Search"}</button><br/>
+            {searchByNameVisible && searchByNameVisible ? <div className="searchCocktailByNameContainer">
                 {cocktailByName && cocktailByName.map((cocktail) => (
                    <CocktailByName cocktail={cocktail} key={cocktail.idDrink}/>
             ))}
-            </div>
+            </div> : ""}
             <label htmlFor="name"> By alcohol : </label>
             <select onChange={e => setSearchByCat(e.target.value)}>
                 <option value="">---</option>

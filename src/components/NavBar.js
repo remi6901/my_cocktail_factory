@@ -16,16 +16,16 @@ function NavBar(){
                     <a href="/" className="navbar_link">Home</a>
                 </li>
                 <li className="navbar_item">
-                    <a href="/" className="navbar_link">Search a cocktail</a>
+                    <a href="/search_cocktail" className="navbar_link">Search a cocktail</a>
                 </li>
                 <li className="navbar_item">
-                    <a href="/" className="navbar_link">Surprise me</a>
+                    <a href="/surprise_me" className="navbar_link">Surprise me</a>
                 </li>
                 <li className="navbar_item">
-                    <a href="/" className="navbar_link">Contact</a>
+                    <a href="/contact" className="navbar_link">Contact</a>
                 </li>
             </ul>
-            <button className="navbar_burger" onClick={handleShowLinks}>
+            <button className= "navbar_burger" onClick={handleShowLinks}>
                 <span className="burger_bar"></span>
             </button>
         </nav>

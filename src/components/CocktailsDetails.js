@@ -46,8 +46,10 @@ function CocktailDetails(){
                             <p>{cocktail.strInstructions}</p>
                         </div>        
                     </div>
+                    <a href="/search_cocktail"><button className="cocktailDetailsButton">Return</button></a>
                 </div>
             ))}
+            
         </div>
     )
 }

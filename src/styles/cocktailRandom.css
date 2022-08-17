@@ -29,7 +29,7 @@
 
 .cocktailRandomUl{
     list-style-type: none;
-    margin-left: -40px;
+    
 }
 
 .cocktailRandomDivRecip{
@@ -44,7 +44,9 @@
 
 .cocktailRandomButton{
     width: 15%;
-    height: 5vh;
+    height: auto;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
     margin-left: 45%;
     margin-right: 45%;
     margin-top: 5vh;

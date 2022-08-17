@@ -29,7 +29,6 @@
 
 .cocktailDetailsUl{
     list-style-type: none;
-    margin-left: -40px;
 }
 
 .cocktailDetailsDivRecip{
@@ -43,9 +42,19 @@
 }
 
 .cocktailDetailsButton{
-    width: 10%;
+    width: 15%;
+    height: auto;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
     margin-left: 45%;
     margin-right: 45%;
     margin-top: 5vh;
-    margin-bottom: 1vh;
+    background-color: yellow;
+    border: solid white 2px;
+    border-radius: 10px;
+}
+
+.cocktailDetailsButton:hover{
+    cursor: pointer;
+    font-weight: bold;
 }

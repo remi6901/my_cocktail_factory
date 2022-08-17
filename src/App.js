@@ -1,7 +1,6 @@
 import './App.css';
 import CocktailRandom from './components/CocktailRandom';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import NavBar from './components/NavBar';
 import Home from './components/Home';
 import SearchCocktail from './components/SearchCocktail';
 import CocktailDetails from './components/CocktailsDetails';

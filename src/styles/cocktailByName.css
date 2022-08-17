@@ -1,5 +1,6 @@
 .cocktailByNameDiv{
     width: 20%;
+    position: relative;
     text-align: center;
     border: solid yellow 3px;
     border-radius: 5px;
@@ -10,3 +11,29 @@
 .cocktailByNameImg{
     width: 100%;
 }
+
+.cocktailByNameTitle{
+    width: 100%;
+    top: 25%;
+    position: absolute;
+    background-color: black;
+    color: white;
+    font-size: 20px;   
+    padding-top: 5px;
+    padding-bottom: 5px;
+    opacity: 0.4;
+}
+
+.cocktailByNameDiv{
+    transition: transform .5s;
+}
+
+
+.cocktailByNameDiv:hover{
+    -ms-transform: scale(1.1); /* IE 9 */
+    -webkit-transform: scale(1.1); /* Safari 3-8 */
+    transform: scale(1.1);
+    }
+
+
+
