@@ -38,20 +38,8 @@
     height:49.5vh;
 }
 
-.searchCocktailByNameContainer{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
 
-.searchCocktailByCatContainer{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
 
-.searchCocktailWithoutAlcoholContainer{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
+
+
+

@@ -1,3 +1,9 @@
+.searchCocktailWithoutAlcoholContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
 .cocktailWithoutAlcoholDiv{
     width: 20%;
     position: relative;

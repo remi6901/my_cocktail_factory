@@ -1,3 +1,9 @@
+.searchCocktailByCatContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
 .cocktailByCatDiv{
     width: 20%;
     position: relative;

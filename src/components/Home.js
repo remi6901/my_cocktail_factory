@@ -41,7 +41,7 @@ function handleEndVideo(){
             <div className="homeDivContainer">
                     <div className="homeContainer1">
                         <img className="cocktail1" src={cocktail1} alt="" width="100%"/>
-                            <Link   to="search_cocktail"
+                            <Link   to="/search_cocktail"
                                     style={{ textDecoration: 'none' }}>
                                 <div className="containerTitle1">
                                     <h3 className="title1">Search a cocktail</h3>

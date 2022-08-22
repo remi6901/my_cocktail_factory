@@ -1,49 +1,17 @@
-import axios from "axios";
 import {useState} from "react";
-import CocktailByCat from "./CocktailByCat";
-import CocktailByName from "./CocktailByName";
-import CocktailWithoutAlcohol from "./CocktailWithoutAlcohol";
+import {Link} from "react-router-dom";
 import NavBar from "./NavBar";
 import "../styles/searchCocktail.css";
 import cocktail3 from "../assets/cocktail3.jpg";
 import cocktail4 from "../assets/cocktail4.jpg";
 
 
+
 function SearchCocktail(){
-    const[cocktailByName, setCocktailByName] = useState("");
-    const[cocktailByCat, setCocktailByCat] = useState("");
     const[searchByName, setSearchByName] = useState("");
     const[searchByCat, setSearchByCat] = useState("");
-    const[cocktailWithoutAlcohol, setCocktailWithoutAlcohol] = useState("");
-    const[searchByNameVisible, setSearchByNameVisible] = useState(true);
     
-
-    
-    function getCocktailByName(){
-        axios
-            .get(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${searchByName}`)
-            .then(response => response.data)
-            .then(data => setCocktailByName(data.drinks));
-            setSearchByNameVisible(!searchByNameVisible);
-            console.log(searchByNameVisible)
-    }
-    
-
-    function getCocktailByCat(){
-        axios
-        .get(`https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${searchByCat}`)
-        .then(response => response.data)
-        .then(data => setCocktailByCat(data.drinks))
-    }
-
-    function getCocktailWithoutAlcohol(){
-        axios
-        .get(`https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Non_Alcoholic`)
-        .then(response => response.data)
-        .then(data => setCocktailWithoutAlcohol(data.drinks));
-    }
      
-
     function handleSearchByNameValue(e){
         e.preventDefault()
         setSearchByName(e.target.value)
@@ -70,12 +38,7 @@ function SearchCocktail(){
                     value={searchByName} 
                     onChange={handleSearchByNameValue} 
                     placeholder="ex : Mojito"/>
-            <button onClick={getCocktailByName}>{searchByNameVisible ? "Close" : "Search"}</button><br/>
-            {searchByNameVisible && searchByNameVisible ? <div className="searchCocktailByNameContainer">
-                {cocktailByName && cocktailByName.map((cocktail) => (
-                   <CocktailByName cocktail={cocktail} key={cocktail.idDrink}/>
-            ))}
-            </div> : ""}
+            <Link to={`/name/${searchByName}`}><button>Search</button></Link><br/>
             <label htmlFor="name"> By alcohol : </label>
             <select onChange={e => setSearchByCat(e.target.value)}>
                 <option value="">---</option>
@@ -94,19 +57,9 @@ function SearchCocktail(){
                 <option value="Vodka">Vodka</option>
                 <option value="Whiskey">Whiskey</option> 
             </select>
-            <button onClick={getCocktailByCat}>Search</button>
-            <div className="searchCocktailByCatContainer">
-                {cocktailByCat && cocktailByCat.map((cocktail) => (
-                    <CocktailByCat cocktail={cocktail} key={cocktail.idDrink}/>
-                ))}
-            </div>
+            <Link to={`/alcohol/${searchByCat}`}><button>Search</button></Link>
             <p>If you looking for a cocktail without alcohol, </p>
-            <button onClick={getCocktailWithoutAlcohol}>Click here</button>
-            <div className="searchCocktailWithoutAlcoholContainer">
-                {cocktailWithoutAlcohol && cocktailWithoutAlcohol.map((cocktail) => (
-                        <CocktailWithoutAlcohol cocktail={cocktail} key={cocktail.idDrink}/>
-                ))}
-            </div>
+            <Link to={`/without_alcohol/`}><button>Click here</button></Link>
         </div>
     )
 }

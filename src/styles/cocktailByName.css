@@ -1,3 +1,9 @@
+.searchCocktailByNameContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
 .cocktailByNameDiv{
     width: 20%;
     position: relative;
